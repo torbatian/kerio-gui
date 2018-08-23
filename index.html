@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Electron boilerplate</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<div class="container-fluid d-flex flex-column">
+		<header>
+			<form class="form-inline">
+				<div class="form-group mx-sm-3 mb-2">
+					<label for="rootPassword" class="sr-only">Root Password</label>
+					<input type="password" class="form-control" id="rootPassword" placeholder="Password">
+				</div>
+				<button class="btn btn-primary mb-2" type="button" onclick="change()">Save</button>
+			</form>
+		</header>
+		<section>
+			<button class="btn btn-danger" onclick="stop()">
+				<i class="icon-stop"></i> Stop</button>
+			<button class="btn btn-primary" onclick="start()">
+				<i class="icon-start"></i> Start</button>
+			<button class="btn btn-warning" onclick="restart">
+				<i class="icon-reload"></i> Restart</button>
+		</section>
+		<footer>
+			<div class="status unknown">
+				<i class="icon-status"></i> Unknown</div>
+			<div class="status pending">
+				<i class="icon-status"></i> Pending ...</div>
+			<div class="status error">
+				<i class="icon-status"></i> Error</div>
+			<div class="status running">
+				<i class="icon-status"></i> Running</div>
+			<div class="status stopped">
+				<i class="icon-status"></i> Stopped</div>
+		</footer>
+	</div>
+	<script src="./app.js"></script>
+	<script>
+		getStatus()
+	</script>
+</body>
+
+</html>
